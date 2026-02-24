@@ -1,0 +1,64 @@
+/* 全体レイアウト */
+body { margin: 0; padding: 0; font-family: sans-serif; }
+#map { height: 90vh; width: 100%; }
+.info-panel { height: 10vh; padding: 10px; background: #f9f9f9; border-bottom: 1px solid #ccc; box-sizing: border-box; }
+
+/* 現在地アイコン */
+.current-location-icon { position: relative; }
+
+.user-dot {
+    width: 12px; height: 12px;
+    background-color: #007AFF;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    z-index: 3;
+}
+
+.direction-beam {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 0; height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid rgba(0, 122, 255, 0.25);
+    margin-left: -20px;
+    margin-top: -45px;
+    transform-origin: bottom center;
+    z-index: 2;
+    display: none;
+}
+
+.pulse {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.pulse::after {
+    content: "";
+    position: absolute;
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 8px rgba(0, 122, 255, 0.5);
+    animation: pulsate 2.5s ease-out infinite;
+}
+
+@keyframes pulsate {
+    0% { transform: scale(0.1); opacity: 1; }
+    100% { transform: scale(3.5); opacity: 0; }
+}
+
+/* ボタン */
+#orient-btn {
+    position: absolute; top: 110px; right: 10px;
+    z-index: 1000; padding: 8px;
+    background: white; border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 4px; cursor: pointer;
+}

@@ -1,0 +1,509 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.755663,
+          34.980063
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.755775,
+          34.965951
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.763109,
+          34.982227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7448468,
+          35.0576369
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.739548,
+          35.039692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.778101,
+          35.038033
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7580328,
+          34.950237
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7731335,
+          34.9483433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.760552,
+          34.940231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.829643,
+          34.98619
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.8148644,
+          34.9853685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.814935,
+          34.985312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7688702,
+          35.0108986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7688702,
+          35.0108986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7458836,
+          35.0043215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.741069,
+          35.017471
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7458836,
+          35.0043215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7355687,
+          35.0039429
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7697631,
+          35.0079217
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7392156,
+          35.0265997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.73226,
+          35.000103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.73226,
+          35.000103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.704168,
+          35.032194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7230002,
+          35.0041173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.704168,
+          35.032194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7133925,
+          35.0183835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7139404,
+          34.9760962
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7683425,
+          35.0108131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7021565,
+          34.9485602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7031274,
+          34.9522037
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.6993136,
+          34.9307499
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.6944936,
+          34.9298681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.762783,
+          34.94629
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.769593,
+          34.817282
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7912341,
+          34.856901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "crime": "",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.41,
+          35.470699
+        ]
+      }
+    }
+  ]
+}
