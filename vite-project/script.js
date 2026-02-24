@@ -6,7 +6,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 let myLatLng = null;
 let userMarker = null;
-let destinationMarker = null;
 let routingControl = null;
 
 // 現在地用カスタムアイコン
@@ -39,9 +38,6 @@ if (navigator.geolocation) {
 function setDestinationAndRoute(latlng) {
     document.getElementById('dest-info').textContent = 
         `緯度: ${latlng.lat.toFixed(5)}, 経度: ${latlng.lng.toFixed(5)}`;
-
-    if (destinationMarker) { map.removeLayer(destinationMarker); }
-    destinationMarker = L.marker(latlng).addTo(map).bindPopup("目的地").openPopup();
 
     if (myLatLng) {
         if (routingControl) { map.removeControl(routingControl); }
@@ -104,8 +100,16 @@ fetch('./kyoto_crime.json')
         L.geoJSON(crimeData, {
             onEachFeature: (feature, layer) => {
                 // ポップアップに情報を表示（必要に応じて）
-                if (feature.properties && feature.properties.crime) {
-                    layer.bindPopup(`犯罪種別: ${feature.properties.crime}`);
+                if (feature.properties) {
+                    const props = feature.properties;
+                    let popupContent = `<b>犯罪種別:</b> ${props['罪名'] || '不明'}`;
+                    if (props['手口']) {
+                        popupContent += `<br><b>手口:</b> ${props['手口']}`;
+                    }
+                    if (props['発生年月日（始期）']) {
+                        popupContent += `<br><b>発生日時:</b> ${props['発生年月日（始期）']} ${props['発生時（始期）'] ? props['発生時（始期）'] + '時頃' : ''}`;
+                    }
+                    layer.bindPopup(popupContent);
                 }
                 
                 layer.on('click', (e) => {
@@ -120,3 +124,62 @@ fetch('./kyoto_crime.json')
     .catch(error => {
         console.error('JSONの読み込み中にエラーが発生しました:', error);
     });
+
+    // 7. 危険エリアデータの読み込みと可視化
+fetch('./danger_areas.geojson')
+    .then(response => {
+        if (!response.ok) throw new Error('danger_areas.geojson の読み込みに失敗しました');
+        return response.json();
+    })
+    .then(dangerData => {
+        L.geoJSON(dangerData, {
+            // 元のポリゴン自体は透明にする（中心に円を描くため）
+            style: {
+                color: "transparent",
+                fillOpacity: 0
+            },
+            onEachFeature: (feature, layer) => {
+                const score = feature.properties.risk_score || 0;
+                
+                // ポリゴンの中心座標を取得
+                const center = layer.getBounds().getCenter();
+
+                // スコアに基づいて円のスタイルを設定
+                // スコアが 0.9 付近なので、半径を調整するために倍率（例: 15）を掛けます
+                const circleOptions = {
+                    radius: score * 15,          // スコアによって大きさを変える
+                    fillColor: getDangerColor(score), // スコアによって色を変える
+                    color: "#333",
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: 0.6
+                };
+
+                // 地図に円を追加
+                const circle = L.circleMarker(center, circleOptions).addTo(map);
+
+                // ポップアップの設定
+                circle.bindPopup(`
+                    <div style="text-align:center;">
+                        <b>危険度エリア</b><br>
+                        <span style="font-size:1.2em; color:red;">スコア: ${score.toFixed(4)}</span>
+                    </div>
+                `);
+
+                // 円をクリックした時もルート検索の目的地にする場合
+                circle.on('click', (e) => {
+                    setDestinationAndRoute(e.latlng);
+                    L.DomEvent.stopPropagation(e);
+                });
+            }
+        }).addTo(map);
+    })
+    .catch(error => console.error('危険エリアデータの取得エラー:', error));
+
+// 危険スコアに応じた色を返す関数（データの値に合わせて調整してください）
+function getDangerColor(s) {
+    return s > 0.945 ? '#800026' : // 非常に高い
+           s > 0.943 ? '#BD0026' : // 高い
+           s > 0.941 ? '#E31A1C' : // 中程度
+                       '#FC4E2A';  // 低い（このデータ内での相対比較）
+}
